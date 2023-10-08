@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mensaje de Amor en Diferentes Idiomas</title>
+    <style>
+      body {
+background-image: url('GRSLS.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+      }
+      #mensaje {
+            text-align: center;
+            font-size: 44px; /* Tamaño de fuente más grande */
+            color: #000000; /* Color de texto blanco para mayor contraste */
+            margin-top: -500px; /* Ajusta el margen superior negativo para mover el texto hacia arriba */
+            font-family: "Montserrat", sans-serif; /* Cambia la fuente */
+            font-weight: bold; /* Aplica estilo negrita */
+      }
+            /* Estilos específicos para pantallas más pequeñas */
+        @media screen and (max-width: 768px) {
+            #mensaje {
+                font-size: 24px; /* Tamaño de fuente más pequeño para dispositivos móviles */
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="mensaje"></div>
+
+    <script>
+        function obtenerMensaje() {
+            var ahora = new Date();
+            var hora = ahora.getHours();
+            var diaSemana = ahora.getDay(); // 0 = domingo, 1 = lunes, ..., 6 = sábado
+
+            var idiomas = [
+ // Español
+"TE AMO",
+
+// Inglés
+"I LOVE YOU",
+
+// Francés
+"JE T'AIME",
+
+// Alemán
+"ICH LIEBE DICH",
+
+// Italiano
+"TI AMO",
+
+// Portugués
+"EU TE AMO",
+
+// Indonesio
+"SAYANG",
+
+// Holandés
+"IK HOU VAN JE",
+
+// Sueco
+"JAG ÄLSKAR DIG",
+
+// Noruego
+"JEG ELSKER DIG",
+
+// Danés
+"JEG ELSKER DIG",
+
+// Finés
+"RAKASTAN SINUA",
+
+// Polaco
+"KOCHAM CIĘ",
+
+// Ruso
+"Я ТЕБЯ ЛЮБЛЮ",
+
+// Ucraniano
+"Я ТЕБЕ ЛЮБЛЮ",
+
+// Checo
+"MILUJI TĚ",
+
+// Eslovaco
+"ĽUBIM ŤA",
+
+// Húngaro
+"SZERETLEK",
+
+// Rumano
+"TE IUBESC",
+
+// Búlgaro
+"OБИЧАМ ТЕ",
+
+// Griego
+"Σ'ΑΓΑΠΏ",
+
+// Turco
+"SENİ SEVİYORUM",
+
+// Árabe
+"أنا أحبك",
+
+// Hebreo
+"אני אוהב אותך",
+
+// Hindi
+"मैं तुम्हें पसंद करता हूँ",
+
+// Chino (Simplificado)
+"我爱你",
+
+// Chino (Tradicional)
+"我愛你",
+
+// Japonés
+"愛してる",
+
+// Coreano
+"사랑해요",
+
+// Vietnamita
+"TÔI YÊU BẠN",
+
+// Tailandés
+"ฉันรักคุณ",
+
+// Malayo
+"AKU CINTA KAMU",
+
+// Filipino
+"MAHAL KITA",
+
+// Bengalí
+"আমি তোমায় ভালোবাসি",
+
+// Tamil
+"நான் உன்னை காதலிக்கிறேன்",
+
+// Telugu
+"నాకు నీవు ప్రియము",
+
+// Urdu
+"میں تم سے پیار کرتا ہوں",
+
+// Punjabi
+"ਮੈਂ ਤੁਹਾਨੂੰ ਪਿਆਰ ਕਰਦਾ ਹਾਂ",
+
+// Maratí
+"माझ्याकडून तुझ्यावर प्रेम आहे",
+
+// Gujarati
+"હું તને પ્રેમ કરું છું",
+
+// Kannada
+"ನಾನು ನಿಮ್ಮನ್ನು ಪ್ರೀತಿಸುತ್ತೇನೆ",
+
+// Malayalam
+"ഞാൻ നിന്നെ സ്നേഹിക്കുന്നു",
+
+// Sinhala
+"මම උඹට ආදරය කරයි",
+
+// Nepalí
+"म तिमीलाई माया गर्छु",
+
+// Bengalí
+"আমি তোমায় ভালোবাসি",
+
+// Oriya
+"ମୁଁ ତୁମେ ଭଲପାଇଁ",
+
+// Assamés
+"মোক তোমাক লওঁ কৰো",
+
+// Manipuri
+"ময়াম করুং",
+
+// Kashmiri
+"ميه چه سنڌي توسين ڪري وارنديو اهيون",
+
+// Sindhi
+"منهنجي توهان توانجي ماهيه",
+
+// Dari
+"من تو را دوست دارم",
+
+// Pashto
+"زه ته څوښم",
+
+// Uzbeko
+"МЕН СЕНИ ЯККАЛАЙМАН",
+
+// Kazajo
+"МЕН СЕНІ СҮЮ",
+
+// Kirguís
+"МЕН СЕНИ СУЙУМ",
+
+// Turcomano
+"МЕН СЕНИ SOYAM",
+
+// Tártaro
+"МИН СИЗГЕ МЕГІ ШЕГІМ",
+
+// Uigur
+"مەن سەننى سەغلەمەن",
+
+// Tayiko
+"МАН ТОРО ДУСТ ДОРАМ",
+
+// Azerí
+"MƏN SƏNİ SEVİRƏM",
+
+// Armenio
+"Ես քեզ սիրում եմ",
+
+// Georgiano
+"მიყვარხარ",
+
+// Ávar
+"МАН ТӀА ВАРДАМ",
+
+// Lezgian
+"МАН ТИХ ДАУ ЖИНГЕН",
+
+// Abjasio
+"МАН ЖҚЫЛУ ЖАУЫМ",
+
+// Osetio
+"МАН ТЕ ТОНД ЗӔКИРАМ",
+
+// Checheno
+"МАН ТЕ ХОЙ ЧОРАМ",
+
+// Tuvano
+"МЕН СЕНИ СЕВЛЕМИН",
+
+// Mongol
+"БИ ТАНАД АИА ЛАВЛА",
+
+
+            ];
+
+            // Calcula un índice único basado en la hora actual y el día de la semana
+            var indice = (diaSemana * 24 + hora) % idiomas.length;
+
+            // Muestra el mensaje en el idioma correspondiente
+            var mensaje = idiomas[indice];
+
+            document.getElementById("mensaje").textContent = mensaje;
+        }
+
+        obtenerMensaje(); // Llamar a la función una vez para mostrar el mensaje inicial.
+
+        // Llamar a la función cada hora (en milisegundos)
+        setInterval(obtenerMensaje, 60 * 60 * 1000);
+    </script>
+</body>
+</html>
