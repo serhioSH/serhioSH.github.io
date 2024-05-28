@@ -1,10 +1,271 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>Mensaje de Amor en Diferentes Idiomas</title>
+    <style>
+      body {
+    background-image: url('GRSLS.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+      }
+      #mensaje {
+            text-align: center;
+            font-size: 100px; /* Tamaño de fuente más grande */
+            color: #000000; /* Color de texto blanco para mayor contraste */
+            margin-top: -500px; /* Ajusta el margen superior negativo para mover el texto hacia arriba */
+            font-family: "Montserrat", sans-serif; /* Cambia la fuente */
+            font-weight: bold; /* Aplica estilo negrita */
+      }
+            /* Estilos específicos para pantallas más pequeñas */
+        @media screen and (max-width: 768px) {
+            #mensaje {
+                font-size: 24px; /* Tamaño de fuente más pequeño para dispositivos móviles */
+            }
+        }
+    </style>
+</head>
 <body>
+      
+    <div id="mensaje"></div>
 
-<h1>Lo sentimos mucho, pero en este momento nuestra página se encuentra fuera de servicio.<br>
-    Estamos trabajando arduamente para solucionar el problema lo antes posible. Apreciamos tu paciencia y comprensión. ¡Gracias!</h1>
-    
+    <script>
+        function obtenerMensaje() {
+            var ahora = new Date();
+            var hora = ahora.getHours();
+            var diaSemana = ahora.getDay(); // 0 = domingo, 1 = lunes, ..., 6 = sábado
+
+            var idiomas = [
+ // Español
+"TE AMARÉ POR SIEMPRE",
+
+// Inglés
+"I WILL LOVE YOU FOREVER",
+
+// Francés
+"JE T'AIMERAI POUR TOUJOURS",
+
+// Alemán
+"ICH WERDE DICH FÜR IMMER LIEBEN",
+
+// Italiano
+"TI AMERÒ PER SEMPRE",
+
+// Portugués
+"EU TE AMAREI PARA SEMPRE",
+
+// Indonesio
+"AKU AKAN MENCINTAIMU SELAMANYA",
+
+// Holandés
+"IK ZAL VAN JE BLIJVEN HOUDEN",
+
+// Sueco
+"JAG SKA ÄLSKA DIG FÖR ALLTID",
+
+// Noruego
+"JEG VIL ELSKE DEG FOR ALLTID",
+
+// Danés
+"JEG VIL ELSKE DIG FOR EVIGT",
+
+// Finés
+"RAKASTAN SINUA IKUISUUDESSA",
+
+// Polaco
+"KOCHAM CIĘ NA ZAWSZE",
+
+// Ruso
+"Я БУДУ ЛЮБИТЬ ТЕБЯ ВСЕГДА",
+
+// Ucraniano
+"Я БУДУ ТЕБЕ КОХАТИ НАВІКИ",
+
+// Checo
+"BUDU TĚ MILOVAT NAVĚKY",
+
+// Eslovaco
+"BUDÚCE TĚ MILUJI NAVŽDY",
+
+// Húngaro
+"ÖRÖKKÉ SZERETNI FOGLAK",
+
+// Rumano
+"TE VOI IUBI ÎNTOTDEAUNA",
+
+// Búlgaro
+"ЩЕ ТЕ ОБИЧАМ ЗАВИНАГИ",
+
+// Griego
+"ΘΑ ΣΕ ΑΓΑΠΏ ΓΙΑ ΠΆΝΤΑ",
+
+// Turco
+"SENİ HER ZAMAN SEVECEĞİM",
+
+// Árabe
+"سأحبك إلى الأبد",
+
+// Hebreo
+"אני אוהב אותך לעד",
+
+// Hindi
+"मैं हमेशा तुम्हें प्यार करूंगा",
+
+// Chino (Simplificado)
+"我将永远爱你",
+
+// Chino (Tradicional)
+"我將永遠愛你",
+
+// Japonés
+"永遠に愛してる",
+
+// Coreano
+"영원히 사랑할게",
+
+// Vietnamita
+"TÔI SẼ YÊU BẠN MÃI MÃI",
+
+// Tailandés
+"ฉันจะรักคุณตลอดไป",
+
+// Malayo
+"AKU AKAN MENCINTAI MU SELAMANYA",
+
+// Filipino
+"MAHAL KITA HANGGANG SA WALANG HANGGAN",
+
+// Bengalí
+"আমি আমার জীবনের শেষ পর্যন্ত তোমাকে ভালোবাসব",
+
+// Tamil
+"என் வாழ்க்கையில் எப்போதும் உன்னைப் பிரியுவேன்",
+
+// Telugu
+"నా జీవితంలో ఎప్పటికీ మీరు నా ప్రేమను అందించారు",
+
+// Urdu
+"میں تمہیں ہمیشہ محبت کروں گا",
+
+// Punjabi
+"ਮੈਂ ਤੁਹਾਨੂੰ ਹਮੇਸ਼ਾ ਪਿਆਰ ਕਰਾਂਗਾ",
+
+// Maratí
+"मी तुझ्यावर प्रेम करेन",
+
+// Gujarati
+"હું તને હંમેશા પ્રેમ કરીશ",
+
+// Kannada
+"ನಾನು ಯಾವಾಗಲೂ ನಿನ್ನನ್ನು ಪ್ರೀತಿಸುತ್ತೇನೆ",
+
+// Malayalam
+"എന്റെ ജീവിതത്തിലെ എല്ലാ സമയവും നിന്നെ സ്നേഹിക്കും",
+
+// Sinhala
+"මම කියලා තියෙන්නේ මම කොටි වලින් කියන්නේ",
+
+// Nepalí
+"म तिमीलाई सधैं माया गर्नेछु",
+
+// Bengalí
+"আমি তোমাকে সবসময় ভালবাসব",
+
+// Oriya
+"ମୁଁ ତୁମେ ସଦା ଭଲପାଇ ଥାଇବାକୁନିହାଁ",
+
+// Assamés
+"মই আমাৰ জীৱনত নিৰন্তৰ তোমাক ভালপাওঁ",
+
+// Manipuri
+"মই তোমদুকল পুনরায় চাওব",
+
+// Kashmiri
+"ميه چه سنڌي توسين ڪري وارنديو اهيون",
+
+// Sindhi
+"منهنجي توهان توانجي ماهيه",
+
+// Dari
+"من تو را دوست دارم",
+
+// Pashto
+"زه ته څوښم",
+
+// Uzbeko
+"МЕН СЕНИ ЯККАЛАЙМАН",
+
+// Kazajo
+"МЕН СЕНІ СҮЮ",
+
+// Kirguís
+"МЕН СЕНИ СУЙУМ",
+
+// Turcomano
+"МЕН СЕНИ SOYAM",
+
+// Tártaro
+"МИН СИЗГЕ МЕГІ ШЕГІМ",
+
+// Uigur
+"مەن سەننى سەغلەمەن",
+
+// Tayiko
+"МАН ТОРО ДУСТ ДОРАМ",
+
+// Azerí
+"MƏN SƏNİ SEVİRƏM",
+
+// Armenio
+"Ես քեզ սիրում եմ",
+
+// Georgiano
+"მიყვარხარ",
+
+// Ávar
+"МАН ТӀА ВАРДАМ",
+
+// Lezgian
+"МАН ТИХ ДАУ ЖИНГЕН",
+
+// Abjasio
+"МАН ЖҚЫЛУ ЖАУЫМ",
+
+// Osetio
+"МАН ТЕ ТОНД ЗӔКИРАМ",
+
+// Checheno
+"МАН ТЕ ХОЙ ЧОРАМ",
+
+// Tuvano
+"МЕН СЕНИ СЕВЛЕМИН",
+
+// Mongol
+"БИ ТАНАД АИА ЛАВЛА",
+
+
+            ];
+
+            // Calcula un índice único basado en la hora actual y el día de la semana
+            var indice = (diaSemana * 24 + hora) % idiomas.length;
+
+            // Muestra el mensaje en el idioma correspondiente
+            var mensaje = idiomas[indice];
+
+            document.getElementById("mensaje").textContent = mensaje;
+        }
+
+        obtenerMensaje(); // Llamar a la función una vez para mostrar el mensaje inicial.
+
+        // Llamar a la función cada hora (en milisegundos)
+        setInterval(obtenerMensaje, 60 * 60 * 1000);
+    </script>
 </body>
-
 </html>
