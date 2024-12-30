@@ -1356,7 +1356,7 @@ body {
     left: 50%; /* Para centrarlo en el eje X */
     transform: translateX(-50%); /* Ajustamos el elemento para que esté completamente centrado */
     font-size: 3em; /* Tamaño de fuente grande */
-    color: black; /* Color de texto negro */
+    color: yellow; /* Color de texto negro */
     background-color: yellow; /* Fondo amarillo */
     padding: 20px; /* Espaciado alrededor del texto */
     border-radius: 10px; /* Bordes redondeados */
