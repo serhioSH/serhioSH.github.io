@@ -1348,3 +1348,19 @@ body {
   -webkit-animation-play-state: paused !important;
           animation-play-state: paused !important;
 }/*# sourceMappingURL=main.css.map */
+
+
+#LV.LV {
+    position: absolute; /* Lo posicionamos de manera absoluta para controlarlo en la parte superior */
+    top: 10px; /* A 10px desde la parte superior */
+    left: 50%; /* Para centrarlo en el eje X */
+    transform: translateX(-50%); /* Ajustamos el elemento para que esté completamente centrado */
+    font-size: 3em; /* Tamaño de fuente grande */
+    color: black; /* Color de texto negro */
+    background-color: yellow; /* Fondo amarillo */
+    padding: 20px; /* Espaciado alrededor del texto */
+    border-radius: 10px; /* Bordes redondeados */
+    text-align: center; /* Centra el texto dentro del div */
+    font-weight: bold; /* Hacemos el texto más pesado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para destacar */
+}
